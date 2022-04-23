@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+.container{
+    max-width: 65%;
+    margin-inline: auto;
+    
+    .title{
+        margin-block: 5rem 2rem;
+        text-align: center;
+        color: #444;
+    }
+
+    .inputs{
+        display: flex;
+        justify-content: center;
+
+        input{
+            width: 25%;
+            padding: 10px;
+            outline: none;
+            border: 1px solid #555;
+            border-radius: 5px 0 0 5px;
+        
+            &:focus{
+                outline: none;
+                border: 1px solid #222;
+                border-radius: 5px 0 0 5px;
+            }
+        }
+
+        button{
+            background-color: #FFAE42;
+            padding-inline: 10px;
+            border: 1px solid #555;
+            border-radius: 0 5px 5px 0;
+        }
+    }
+
+    .tasks-table{
+        margin-top: 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .task-body{
+            display: flex;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            padding: 7px;
+            margin: 3px;
+            
+
+            .task-name{
+                padding-block: 3px;
+                width: 20rem;
+                text-align: start;
+                margin-left: .5rem;
+            }
+
+            .task-status{
+                margin-right: 5px;
+                cursor: pointer;
+                min-width: 8ch;
+                align-self: center;
+            }
+
+            .task-edit, .task-delete{
+                cursor: pointer;
+                min-width: 3rem;
+                align-self: center;
+            }
+        }
+        
+    }
+}
+
+.finished{
+    text-decoration: line-through;
+    color: #bbb;
+}
+.good{
+    color: #29c24f;
+}
+.danger{
+    color: #cc2d2d;
+}
