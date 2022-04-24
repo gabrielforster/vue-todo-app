@@ -11,7 +11,8 @@ npm run serve
 
 ## todo
 
-- [ ] Add a table header 'tasks - status - edit - delete '
+- [X] Add a table header 'tasks - status - edit - delete '
+- [ ] Make table header good
 - [X] Add a task when pressing Enter key
 - [ ] Add localstorage into the app
 - [ ] Resposiveness
