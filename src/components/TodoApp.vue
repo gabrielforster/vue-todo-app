@@ -48,6 +48,10 @@ export default {
     }
   },
 
+  created(){
+    document.title = 'ToDo'
+  },
+
   mounted(){
     if(localStorage.getItem('tasks')){
       this.tasks = JSON.parse(localStorage.getItem('tasks'))
