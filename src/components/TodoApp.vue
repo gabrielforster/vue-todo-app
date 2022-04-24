@@ -8,6 +8,13 @@
     </div>
   
       <div class="tasks-table">
+        <div class="table-header" v-if="this.tasks.length !== 0" >
+          <p class="name">{{ this.tasks.length > 1 ? 'Tarefas' : 'Tarefa' }}</p>
+          <p class="status">Status</p>
+          <p class="edit">Editar</p>
+          <p class="delete">Exluir</p>
+        </div>
+
         <div class="task-body" v-for="(task, index) in tasks" :key="index">
           <p class="task-name" :class="{'finished': task.status === 'Feita'}" >{{firstLetterUpper(task.name)}}</p>
           <p

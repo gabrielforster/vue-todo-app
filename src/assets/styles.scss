@@ -9,7 +9,6 @@
 }
 
 .container{
-    margin-inline: auto;
     
     .title{
         margin-block: 5rem 2rem;
@@ -47,17 +46,37 @@
 
     .tasks-table{
         margin-top: 2rem;
+        margin-inline: auto;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 65%;
+
+        .table-header{
+            display: flex;
+            text-align: start;
+
+            p{
+                margin-inline: 15px 0;
+
+                &:first-child{
+                    width:20rem;
+                    // margin-inline: 0 12rem;
+                }
+
+                // &:nth-child(2){
+                //     margin-inline: 3rem 0;
+                // }
+            }
+        }
 
         .task-body{
             display: flex;
             border: 1px solid #aaa;
             border-radius: 5px;
             padding: 7px;
-            margin: 3px;
+            margin-block: 3px;
             
 
             .task-name{
@@ -68,21 +87,25 @@
             }
 
             .task-status{
-                margin-right: 5px;
+                margin-right: 15px;
                 cursor: pointer;
                 min-width: 8ch;
                 align-self: center;
             }
-
-            .task-edit, .task-delete{
+            
+            .task-edit{
+                min-width: 3rem;
+                padding-inline: rem;
+                align-self: center;
+                border-inline: 1px solid #aaa;
+            }
+            
+            .task-delete{
                 cursor: pointer;
                 min-width: 3rem;
                 align-self: center;
             }
 
-            .task-edit{
-                border-inline: 1px solid #aaa;
-            }
 
         }
         
@@ -98,4 +121,7 @@
 }
 .danger{
     color: #cc2d2d;
+}
+.none{
+    display: none;
 }
