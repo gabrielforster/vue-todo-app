@@ -48,6 +48,21 @@ export default {
     }
   },
 
+  mounted(){
+    if(localStorage.getItem('tasks')){
+      this.tasks = JSON.parse(localStorage.getItem('tasks'))
+    }
+  },
+
+  watch:{
+    tasks:{
+      handler(){
+        localStorage.setItem('tasks', JSON.stringify(this.tasks))
+      },
+      deep: true,
+    }
+  },
+
   methods: {
     handleKeyPress(event){
       if(event.key === 'Enter') return this.submitTask()
