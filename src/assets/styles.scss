@@ -1,4 +1,7 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
 * {
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,7 +9,6 @@
 }
 
 .container{
-    max-width: 65%;
     margin-inline: auto;
     
     .title{
@@ -18,8 +20,9 @@
     .inputs{
         display: flex;
         justify-content: center;
-
+        
         input{
+            font-size: 1rem;
             width: 25%;
             padding: 10px;
             outline: none;
@@ -34,6 +37,7 @@
         }
 
         button{
+            font-size: 1rem;
             background-color: #FFAE42;
             padding-inline: 10px;
             border: 1px solid #555;
@@ -75,6 +79,11 @@
                 min-width: 3rem;
                 align-self: center;
             }
+
+            .task-edit{
+                border-inline: 1px solid #aaa;
+            }
+
         }
         
     }
