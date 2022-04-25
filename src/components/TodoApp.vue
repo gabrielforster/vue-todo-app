@@ -4,7 +4,7 @@
 
     <div class="inputs">
       <input v-model="task" type="text" placeholder="Digite uma tarefa" class="task-input" v-on:keyup="handleKeyPress($event)" >
-      <button class="btn" @click="submitTask">Adicionar</button>
+      <button class="btn" @click="submitTask"><span class="fa fa-check"></span></button>
     </div>
   
       <div class="tasks-table">
